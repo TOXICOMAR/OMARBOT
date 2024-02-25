@@ -132,7 +132,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       isAll = true
       if (!isROwner) {
         global.dfail('rowner', m, conn)
-        throw false
+        throw true
       }
       global.opts['pconly'] = isEnable
       break
@@ -141,7 +141,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
       isAll = true
       if (!isROwner) {
         global.dfail('rowner', m, conn)
-        throw false
+        throw true
       }
       global.opts['gconly'] = isEnable
       break
